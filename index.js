@@ -19,7 +19,9 @@ const connectionString = process.env.MONGO_CONNECTION;
 // const database = "QuizDetails";
 
 mongoose
-	.connect(connectionString)
+	.connect(connectionString, {
+		ssl: true,
+	})
 	.then(() => {
 		console.log("db connected");
 	})
