@@ -19,10 +19,7 @@ const connectionString = process.env.MONGO_CONNECTION;
 // const database = "QuizDetails";
 
 mongoose
-	.connect(connectionString, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	})
+	.connect(connectionString)
 	.then(() => {
 		console.log("db connected");
 	})
